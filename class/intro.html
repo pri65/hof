@@ -1,0 +1,227 @@
+//forEach
+//map
+//filter
+//reduce
+
+//callback functions
+function ftweb17(){
+    console.log("web 17 is ver good batch")
+}
+//   console.log("WEB 17 batch is very good batch and it has around"+" "+no_of_students+" "+"students");
+//   console.log(student_name)
+//   ftweb16()
+// }
+
+// function ftweb16(){
+//   console.log("there are around 80 web16 students")
+// }
+
+
+// function summer(num1,num2,resultDisplay){
+//   var res = num1+num2
+//   resultDisplay(res)
+// }
+
+
+// function resultDisplay(result){
+//   console.log("the sume is " + result)
+// }
+
+// summer(2,3,resultDisplay)
+
+
+
+// forEach
+// map
+// filter
+// reduce
+
+// applied only for arrays
+
+var names =["prashant","sanjay","nasir"]
+// Syntax
+// arrayName.forEach(function(element,index,array){})
+
+
+// for(var i=0;i<names.length;i++){
+//   console.log(names[i])
+// }
+
+
+// names.forEach(function(e,i,arr){
+//   console.log(arr)
+// })
+
+// for each element, callback function is executed
+// order of arguments should be same
+
+
+var nums = [1,2,3,4,5]
+
+nums.forEach(function(e,i,arr){
+  //console.log(2*e)
+})
+
+var mobiles=[
+  {brand:"apple",model:"11 pro"},
+  {brand:"nokia",model:"S7562"},
+  {brand:"one plus",model:"7 pro"}
+]
+
+mobiles.forEach(function(e,i,arr){
+  //console.log(e.model)
+  //console.log(arr)
+  // write logic here
+})
+
+
+var names =["prashant","sanjay","nasir"]
+
+// var out = names.map(function(el,i,arr){
+//   return arr
+// })
+
+
+
+// forEach wont return anything
+//console.log(out)
+
+// forEach and map diff
+
+// forEach will not return anything, whereas map will return an array
+
+var nums = [1,2,3,4,5]
+
+ var out = nums.map(function(el,i,arr){
+  return ( i*2)
+})
+
+//console.log(out)
+
+
+// var mobiles=[
+//   {brand:"apple",model:"11 pro"},
+//   {brand:"nokia",model:"S7562"},
+//   {brand:"one plus",model:"7 pro"}
+// ]
+
+// var out = mobiles.map(function(el,i,arr){
+//   return el.model
+// })
+
+// console.log(out)
+
+
+// filter
+
+var numbers =[12,67,89,10,1]
+
+var out = numbers.map(function(el){
+  return el>20
+})
+
+//console.log(out)
+
+
+var res = numbers.filter(function(el,i,arr){
+  return el%2==0
+})
+
+//console.log(res)
+
+//it will return value only if condition is true
+
+
+
+var nums=["1","8","10","30"]
+
+var out = nums.map(Number)
+
+
+
+
+var mobiles=[
+  {brand:"apple",model:"11 pro"},
+  {brand:"nokia",model:"S7562"},
+  {brand:"one plus",model:"7 pro"}
+]
+
+var out = mobiles.filter(function(el,i,arr){
+   if(el.brand=="nokia"){
+     return el
+   }
+})
+//console.log(out)
+
+
+
+// reduce
+// whenever you want to convert to single number use reduce
+
+
+ var nums =[3,5,6,7,5,4]
+
+// var sum =0
+// for(var i=0;i<nums.length;i++){
+//   sum = sum+nums[i]
+// }
+
+// console.log(sum)
+var out = nums.reduce(function(sum,el,i,arr){
+  return sum+el
+},0)
+
+//console.log(out)
+
+// sum=3, el=5, 3+5--> sum=8
+// sum = 8, el=6 sum=8+6=14
+// sum = 14 , el=7, sum=14+7=21
+// sum = 21, el=5 , sum=21+5=26
+// sum =26, el=4, sum=26+4=30
+
+// reduce(function(),initial_value)
+
+
+// sum = 10, el=3 -> sum = 10+3=13
+// sum = 13, el=5 -->sum = 13+5 =18
+// sum =18, el=6-->sum=18+6=24
+
+
+// chaining
+
+// []- forEach - string
+// []- map     - array
+// []- filter. - array
+// []- reduce. - single value
+
+
+// forEach().map() -->not possible
+// forEach().filter() -> not possible
+// map().filter()--> possible
+// filter().reduce()--> possible
+// forEach().reduce()-->not possible
+// filter().map()--> possible
+
+
+var nums = [4,6,7,8,9]
+// cal sum of nums which are divisible by 2
+// filter().reduce()
+
+
+
+// -----WE------------
+
+// Given an array of numbers find the sum of cubes if the number is divisible by 3 Sample Input - [1, 2, 3, 4, 5, 6] Sample Output - 243 (27+216)
+
+var nums = [1, 2, 3, 4, 5, 6]
+
+var out = nums.filter(function(el){
+  return el%2==1
+}).reduce(function(sum,el,i,arr){
+  return sum+el
+},0)
+
+console.log(out)
+
+
+
